@@ -28,6 +28,11 @@ public class EventsStatisticsImplementationTest {
     }
 
     @Test
+    public void testNoRecord() {
+        Assert.assertEquals(0, eventsStatistics.getEventStatisticByName("test-event"), DELTA);
+    }
+
+    @Test
     public void testMultipleRecord() {
 
         final int FIRST_EVENT_AMOUNT = 3;
